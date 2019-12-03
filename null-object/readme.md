@@ -7,7 +7,8 @@ We need to account for the possibility that a user browses the site as a guest. 
 This is a lot of extra code to add in every time you want to check user access, and could cause bugs that are easy to miss if you forget to do the null checks.
 
 EXAMPLE:
-````
+
+```
 function printUser(id) {
     const user = getUser(id);
     let name = 'Guest';
