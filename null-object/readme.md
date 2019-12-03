@@ -8,7 +8,7 @@ This is a lot of extra code to add in every time you want to check user access, 
 
 EXAMPLE:
 
-function printUser(id) {
+`function printUser(id) {
     const user = getUser(id);
     let name = 'Guest';
     if (user != null && user.name != null) name = user.name;
@@ -19,15 +19,14 @@ function printUser(id) {
     } else {
         console.log('You are not allowed here');
     };
-};
+};`
 
 # Solution
 Add a null object. In this case a constructor that creates a default user with a name and the relevant properties. If the user is a guest there is an object you can work with as if it were another user, thereby simplifying the code.
 
 See index.js for example implementation
 
-
-class NullUser {
+`class NullUser {
     constructor() {
       this.name = 'Guest'
     }
@@ -35,3 +34,4 @@ class NullUser {
       return false
     }
   }
+  `
