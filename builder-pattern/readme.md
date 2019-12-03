@@ -3,6 +3,8 @@
 # The Problem: complex object with optional values
 
 - Example:   
+
+```
 class Address {
   constructor(zip, street) {
     this.zip = zip;
@@ -20,6 +22,7 @@ class User {
 };
 
 const user = new User('Bob', undefined, undefined, new Address('12345', 'Main St.'));
+```
 
 Keeping track of all the optional properties when creating a new user can become very complex very fast.
 
