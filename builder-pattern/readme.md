@@ -1,6 +1,6 @@
-#DESIGN PATTERNS: OBJECT BUILDER PATTERN
+# DESIGN PATTERNS: OBJECT BUILDER PATTERN
 
-#The Problem: complex object with optional values
+# The Problem: complex object with optional values
 
 - Example:   
 class Address {
@@ -23,7 +23,7 @@ const user = new User('Bob', undefined, undefined, new Address('12345', 'Main St
 
 Keeping track of all the optional properties when creating a new user can become very complex very fast.
 
-#The solution
+# The solution
 - A. the traditional way with a builder constructor function -> see builder.js
 - B. the ES6 way with paramater object  -> see builder_new.js
 
