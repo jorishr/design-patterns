@@ -31,18 +31,16 @@ class UserBuilder {
       return this;
     };
   
-    build() {
-      return this.user; // the actual build method that returns the new user
+    getUser() {
+      return this.user; //return the entire user object
     };
 };
 
-let newUser = new UserBuilder('John').build();
-console.log(newUser);   //-> User {name: 'John'}
+const newUser = new UserBuilder('John');
+newUser.getUser() //-> User {name: 'John'}
 
-let newUserWithAge = new UserBuilder('John').setAge(18).build();
-console.log(newUserWithAge);   //-> User {name: 'John', age: 18}
+const newUserWithAge = new UserBuilder('John').setAge(18);
+newUserWithAge.getUser();   //-> User {name: 'John', age: 18}
 
-/* using this methods you can more easily set optional property values without
-having the add undefined for the ones that are not set*/
-
-let newUserWithAddress = builder.setAddress(new Address('12345', 'Main St.')).build()
+const newUserWithAddress = new UserBuilder('John').setAddress(new Address('12345', 'Main St.'));
+newUserWithAddress.getUser();   // -> User {name: "John", address: Address}
