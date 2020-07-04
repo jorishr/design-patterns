@@ -1,5 +1,4 @@
-# DESIGN PATTERNS: FACADE PATTERN
+# Javascript design pattern: facade pattern
+The idea is that you create a facade that abstracts some more complex app logic. The facade function should be easy to understand and relate to the business logic of your application. For example, get user data from a database or initiate a payment process. The actual complex implementation methods are 'hidden' in a seperate function. This allows you to more easily change and refactor implementation methods in the future without making major disruptions to your code structure.
 
-The idea is that you create a facade between the complex app logic and the business logic so that the code can easily be changed and refactored in the future.
-
-This is espcially usefull for API code. You seperate the 'ugly' code from, for example, the fetch API and put it into a helper function. If later you want to switch from FETCH API to AXIOS for example, that can be done by simply replacing that helper function.
+The example in this repo has a [before](before.js) and [after](after.js) state whereby the a facade is build to hide the Fetch API implementation into a helper function. In a future update it is now relatively easy to swap the Fetch API for the Axios library, for example.
