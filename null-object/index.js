@@ -1,5 +1,6 @@
 const   loginBtn      = document.getElementById('loginBtn'),
-        selectInput   = document.getElementById('user-select');
+        selectInput   = document.getElementById('user-select'),
+        contentContainer = document.getElementById('content');
 
 class User {
     constructor(name) {
@@ -41,8 +42,14 @@ function getUser(name) {
 
 // the if statement check user access if statement is now greatly simplified
 function loginUser(user) {
-    if (!user.hasAccess()) {
-      return `<p class="text-danger">You must be logged in to see the content</p>`;
-    } else {
-      return `<p>Congrats you are logged in</p>`;
+    let message = `<p class="text-danger">You must be logged in to see the content</p>`;
+    if (user.hasAccess()) {
+      message = `<p>Congrats you are logged in</p>`;
+    };
+    contentContainer.innerHTML =
+      `
+        <hr>
+        <h3 class="text-center">Welcome ${user.name}</h3>
+        ${message}
+      `;
 };
