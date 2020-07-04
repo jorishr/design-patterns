@@ -1,6 +1,6 @@
 /* 
-  no longer export the entire, just a specific instance of that class
-  to garantuee there is only one single instance of the constructor add a 
+  No longer export the entire class constructor, just a specific instance of that class.
+  To warrant that there is only one single instance of the constructor add a 
   static variable 'instance' to the Logger.
   
   If that var is null, there is no instance of the Logger created, thus
